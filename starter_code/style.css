@@ -7,9 +7,13 @@
 
 /* 
 	Use Google Fonts to make all of the text Proza Libre.
-
 	Make the Title twice as large as the body text, bold, and give it some nice margin.
+}
+}
 */
+body{
+	font-family:'Proza Libre', sans-serif;
+}
 
 /*-------- Main Styles --------*/
 

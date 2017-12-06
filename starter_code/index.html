@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>CSS HTML Forms Lab</title>
+	<link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -62,7 +63,7 @@
 					</div>
 					<div class="row formGroup">
 	
-						<label for="checkboxes">Sentiment:</label>
+						<label for="checkboxes">Adjective:</label>
 						<div class="checkboxes">
 							<div class="check">
 							  <input id="check1" type="checkbox" name="adjective-2" value="powerful"> 
@@ -111,24 +112,48 @@
 		$("form").on("submit", function(event){
 
 		    // Stop the form from submitting
-
+		    event.preventDefault();
 	    	// Run the 'makeResults' function seen above
+	    	makeResults();
+	    	
+ 			let $NAME = $("input#name").val();
+ 			console.log($NAME);
+ 			let $VERB1 = $("#verb-1").val();
+ 			console.log($VERB1);
+ 			let $MISSION = $('textarea').val();
+ 			console.log($MISSION);
+ 			let $SENTIMENT = $("[type=radio]:checked").val();
+ 			console.log($SENTIMENT);
+ 			let $NOUN = $("#noun-1").val();
+ 			console.log($NOUN);
+ 			let $adj1 = $("#check1:checked").val();
+ 			let $adj2 = $("#check2:checked").val();
+ 			let $adj3 = $("#check3:checked").val();
+ 			console.log($adj1+" "+$adj2+ " " + $adj3);
+ 			let ADJECTIVE2 = "";
+ 			if($adj1){
+ 				console.log("YOU FAIL");
+ 				ADJECTIVE2 = ADJECTIVE2 + $adj1 +", ";
+ 			}
+ 			console.log(ADJECTIVE2);
+ 			if($adj2){
+ 				ADJECTIVE2 = ADJECTIVE2 + $adj2 +", ";
+ 			}
+ 			console.log(ADJECTIVE2);
+ 			if($adj3){
+ 				ADJECTIVE2 = ADJECTIVE2 + $adj3 +", ";
+ 			}
+ 			console.log(ADJECTIVE2);
 
-	    	/*
-			
-				For each value entered into a form input, add the input to the corresponding sentence, then append the text into the results section:
+ 			let $NOUN2 = $("#noun-2").val();
+				// For each value entered into a form input, add the input to the corresponding sentence, then append the text into the results section:
+				console.log($NOUN2);
 
-				"Once upon a time there was a Developer named NAME."
+			let story = "Once upon a time there was a Developer named " + $NAME +".  " + $NAME + " came to General Asssembly to " + $VERB1 + " the great mountain of programming knowledge.  " + $MISSION + ", " + $NAME + " shouted.  Though " + $SENTIMENT + ", " + $NAME + " was able to overcome all obstacles with the power of their " + $NOUN + ".  In the end, their success can be contributed entirely to their " + ADJECTIVE2 + $NOUN2 + ".";
+			console.log(story);
+			$("<div id = storyContainer><p id = 'myStory'></p></div>").appendTo($('.results'));
 
-				"NAME came to General Asssembly to VERB1 the great mountain of programming knowledge."
-
-				""MISSION", NAME shouted."
-	
-				"Though SENTIMENT, NAME was able to overcome all obstacles with the power of their NOUN."
-
-				"In the end, their success can be contributed entirely to their " + ADJECTIVE2[list each one checked, comma-separated] + NOUN2."
-
-	    	*/ 
+	    	 $("#myStory").text(story);
 		});
 	</script>
 
