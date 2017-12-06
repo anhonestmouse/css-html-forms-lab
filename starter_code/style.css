@@ -18,6 +18,7 @@ body{
 h1{
 	font-size:28px;
 	font-weight:700;
+	padding-top:36px;
 	margin:36px;
 }
 
@@ -48,6 +49,7 @@ form{
 	border-radius:15px;
 	background-color:#e3e6ec;
 	margin:auto auto;
+	padding-left:15px;
 }
 input{
 	border-radius:5px;
@@ -62,7 +64,7 @@ input[type="submit" i]{
 	background-color:rgba(39,208,127,.5);
 }
 input[type="submit" i]:hover{
-	backgorund-color:rgba(39,208.127,1);
+	background-color:rgba(39,208,127,1.0);
 }
 .row{
 	margin:10px;
@@ -96,7 +98,6 @@ textarea, select, #name,#noun-1,#noun-2{
 	box-shadow:none;
 	width:90%;
 }
-
 /*-------- Form Styles --------*/
 
 
