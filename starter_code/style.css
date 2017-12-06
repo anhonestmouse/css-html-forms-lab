@@ -13,6 +13,12 @@
 */
 body{
 	font-family:'Proza Libre', sans-serif;
+	font-size: 14px;
+}
+h1{
+	font-size:28px;
+	font-weight:700;
+	margin:36px;
 }
 
 /*-------- Main Styles --------*/
@@ -24,33 +30,99 @@ body{
 
 	Every container, form, input, and button should have rounded corners.
 */
+.main{
+	width:100vw;
+	border-radius:15px;
+}
+.container{
+	border-radius: 15px;
+	float:left;
+	width:100%;
+	max-width:500px;
+}
+.results{
+	background-color:#c8dbb3;
+	padding:15px;
+}
+form{
+	border-radius:15px;
+	background-color:#e3e6ec;
+	margin:auto auto;
+}
+input{
+	border-radius:5px;
+	margin:10px;
+}
+input[type="submit" i]{
+	border-radius:5px;
+	font-weight:700;
+	margin:10px;
+	float:right;
+	width:auto;
+	background-color:rgba(39,208,127,.5);
+}
+input[type="submit" i]:hover{
+	backgorund-color:rgba(39,208.127,1);
+}
+.row{
+	margin:10px;
+}
+.formGroup{
+	display: inline-block;
+	width:100%;
+}
+label{
+	display:inline-block;
+	width:100%;
+	padding: 5px 0;
+}
+.radio, .check{
+	margin-left:20px;
+}
+
+.radioButtons label, .checkboxes label{
+	display:inline-block;
+	width:auto;
+}
+#name, #noun-1, #noun-2, select, input[type="submit" i]{
+	min-height:48px;
+	padding:14px;
+}
+textarea{
+	min-height:100px;
+}
+textarea, select, #name,#noun-1,#noun-2{
+	border: 1px #CCC;
+	box-shadow:none;
+	width:90%;
+}
 
 /*-------- Form Styles --------*/
 
 
 /* 
 
-	Make sure the form itself fills the width of whatever container its in, but no larger than 500px.
+	Make sure the form itself fills the width of whatever container its in, but no larger than 500px.^
 	
-	The background should be #E3E6EC, and it should align to the middle of its container.
+	The background should be #E3E6EC^, and it should align to the middle of its container.
 	
-	Every element should have nice, even padding or margin around it.
+	Every element should have nice, even padding or margin around it.^
 
-	.row elements should be spaced out so they're not touching.
+	.row elements should be spaced out so they're not touching.^
 
-	.formGroup elements should fill the width of their container, and be inline-block.
+	.formGroup elements should fill the width of their container, and be inline-block.^
 
-	The labels inside of .formGroup should be on their own line above form options, fill the width of their container, and have top/bottom padding.
+	The labels inside of .formGroup should be on their own line above form options^, fill the width of their container^, and have top/bottom padding.^
 
-	Radio buttons and checkbox options should each be on their own line, and indented a little. 
+	Radio buttons and checkbox options should each be on their own line, and indented a little. ^
 
-	Radio buttons and checkbox labels should be directly to the right of their corresponding inputs, and the text should vertically align with the inputs. 
+	Radio buttons and checkbox labels should be directly to the right of their corresponding inputs, and the text should vertically align with the inputs. ^
 
-	Text inputs, submit buttons, and select boxes should all be at least 48px tall. The should have 14px of padding around their text. 
+	Text inputs, submit buttons, and select boxes should all be at least 48px tall. The should have 14px of padding around their text. ^
 
-	Textareas should be at least 100px tall.
+	Textareas should be at least 100px tall.^
 
-	Text inputs, select boxes, and textareas should have a 1px border that's #CCC, and none of the default shadows.
+	Text inputs, select boxes, and textareas should have a 1px border that's #CCC, and none of the default shadows.^
 
 	The submit button should float to the right, be bolded, and only be as wide as the text makes it.
 
