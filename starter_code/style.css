@@ -18,8 +18,7 @@ body{
 h1{
 	font-size:28px;
 	font-weight:700;
-	padding-top:36px;
-	margin:36px;
+	margin-bottom:28px;
 }
 
 /*-------- Main Styles --------*/
@@ -38,18 +37,19 @@ h1{
 .container{
 	border-radius: 15px;
 	float:left;
-	width:100%;
+	width:48vw;
 	max-width:500px;
 }
 .results{
 	background-color:#c8dbb3;
-	padding:15px;
+	padding:36px;
+	margin-left:4vw;
 }
 form{
 	border-radius:15px;
 	background-color:#e3e6ec;
 	margin:auto auto;
-	padding-left:15px;
+	padding:36px;
 }
 input{
 	border-radius:5px;
@@ -58,7 +58,7 @@ input{
 input[type="submit" i]{
 	border-radius:5px;
 	font-weight:700;
-	margin:10px;
+	margin:15px 30px 5px 0px;
 	float:right;
 	width:auto;
 	background-color:rgba(39,208,127,.5);
@@ -75,7 +75,7 @@ input[type="submit" i]:hover{
 }
 label{
 	display:inline-block;
-	width:100%;
+	width:50vw;
 	padding: 5px 0;
 }
 .radio, .check{
